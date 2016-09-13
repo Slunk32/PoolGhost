@@ -5,7 +5,7 @@ const Single = React.createClass({
   render() {
     return (
       <div className="single-photo">
-      I'm the single
+       This is where I game will live
       </div>
     )
   }

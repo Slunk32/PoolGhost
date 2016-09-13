@@ -6,8 +6,8 @@ const PhotoGrid = React.createClass({
   render() {
     return (
       <div className="photo-grid">
-      I'm the photo grid
-      <Counter />
+      I'm the main page. This is where the menu will live
+      <Counter {...this.props} />
       </div>
     )
   }
