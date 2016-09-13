@@ -1,6 +1,6 @@
 # Pool Ghost
 
-A practice tool for pool. 
+A practice tool for pool.
 
 ## Running
 
