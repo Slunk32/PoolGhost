@@ -4,7 +4,12 @@
 // 2. copy of current state
 
 function score(state = 0, action) {
-  return state;
+  switch (action.type) {
+    case 'INCREMENT_SCORE':
+      
+  default:
+    return state;
+  }
 }
 
 export default score;

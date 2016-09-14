@@ -1,14 +1,13 @@
-import React from 'React';
+import React from 'react';
 import { Link } from 'react-router';
 
 const Counter = React.createClass({
   render() {
-    const { score } = this.props;
+    const { score, incrementScore } = this.props;
     return (
       <p>
-        Clicked: {score} times
-        {' '}
-        <button>
+          Clicked: {score} times
+        <button onClick={incrementScore}>
           Add One
         </button>
       </p>
