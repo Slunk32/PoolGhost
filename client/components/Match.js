@@ -4,7 +4,7 @@ import Counter from './Counter';
 
 // presentational
 
-const PhotoGrid = React.createClass({
+const Match = React.createClass({
   render() {
     return (
       <div className="photo-grid">
@@ -17,4 +17,4 @@ const PhotoGrid = React.createClass({
 
 
 
-export default PhotoGrid;
+export default Match;
