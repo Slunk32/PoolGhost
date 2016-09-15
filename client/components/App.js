@@ -6,7 +6,8 @@ import Main from './Main';
 
 function mapStateToProps(state) {
   return {
-    score: state.score,
+    playerScore: state.score.playerScore,
+    ghostScore: state.score.ghostScore
   }
 }
 

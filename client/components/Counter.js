@@ -3,11 +3,11 @@ import { Link } from 'react-router';
 
 const Counter = React.createClass({
   render() {
-    const { score, incrementScore } = this.props;
+    const { ghostScore, playerScore, incrementScore, who } = this.props;
     return (
       <p>
-          Clicked: {score} times
-        <button onClick={incrementScore}>
+          {who} score: {who === 'Ghost' ? ghostScore : playerScore}
+        <button onClick={incrementScore.bind(null, who)}>
           Add One
         </button>
       </p>
