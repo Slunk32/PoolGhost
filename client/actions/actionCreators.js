@@ -1,5 +1,6 @@
-export function incrementScore() {
+export function incrementScore(who) {
   return {
-    type: 'INCREMENT_SCORE'
+    type: 'INCREMENT_SCORE',
+    who
   }
 }

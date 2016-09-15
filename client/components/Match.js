@@ -9,7 +9,8 @@ const Match = React.createClass({
     return (
       <div className="photo-grid">
       I'm the main page. This is where the menu will live
-      <Counter {...this.props}/>
+      <Counter who={'ghost'} {...this.props}/>
+      <Counter who={'player'} {...this.props}/>
       </div>
     )
   }

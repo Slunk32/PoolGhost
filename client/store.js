@@ -9,7 +9,10 @@ import rootReducer from './reducers/index';
 
 // create an object for the default data
 const defaultState = {
-  score: 0
+  score: {
+    playerScore: 0,
+    ghostScore: 0
+  }
 };
 
 const store = createStore(rootReducer, defaultState);
