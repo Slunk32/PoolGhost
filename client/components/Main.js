@@ -7,9 +7,6 @@ const Main = React.createClass({
     return (
       <div>
       <NavbarInstance />
-        <h1>
-          <Link to="/">Pool Ghost</Link>
-        </h1>
         {React.cloneElement(this.props.children, this.props)}
       </div>
     )

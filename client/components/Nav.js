@@ -1,28 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const NavbarInstance =  React.createClass({
   render() {
     return (
-      <Navbar>
-      <Navbar.Header>
+    <Navbar default>
+    <Navbar.Header>
       <Navbar.Brand>
-      <a href="#">Pool Ghost</a>
+        <Link to="/">Pool Ghost</Link>
       </Navbar.Brand>
-      </Navbar.Header>
+      <Navbar.Toggle />
+    </Navbar.Header>
+    <Navbar.Collapse>
       <Nav>
-      <NavItem eventKey={1} href="#">Link</NavItem>
-      <NavItem eventKey={2} href="#">Link</NavItem>
-      <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-      <MenuItem eventKey={3.1}>Action</MenuItem>
-      <MenuItem eventKey={3.2}>Another action</MenuItem>
-      <MenuItem eventKey={3.3}>Something else here</MenuItem>
-      <MenuItem divider />
-      <MenuItem eventKey={3.3}>Separated link</MenuItem>
-      </NavDropdown>
+        <LinkContainer to='/view'>
+          <NavItem>Link To View</NavItem>
+        </LinkContainer>
+        <NavItem eventKey={2} href="#">Link</NavItem>
       </Nav>
-      </Navbar>
+      <Nav pullRight>
+        <NavItem>Log In</NavItem>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
     )
   }
 })
