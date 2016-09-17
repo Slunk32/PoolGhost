@@ -16,9 +16,11 @@ const NavbarInstance =  React.createClass({
     <Navbar.Collapse>
       <Nav>
         <LinkContainer to='/view'>
-          <NavItem>Link To View</NavItem>
+          <NavItem>View</NavItem>
         </LinkContainer>
-        <NavItem eventKey={2} href="#">Link</NavItem>
+        <LinkContainer to='/stats'>
+          <NavItem>Stats</NavItem>
+        </LinkContainer>
       </Nav>
       <Nav pullRight>
         <NavItem>Log In</NavItem>
