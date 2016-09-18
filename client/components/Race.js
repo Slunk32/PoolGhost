@@ -5,7 +5,12 @@ const Race = React.createClass({
   handleSubmit(e) {
     e.preventDefault();
     const race = this.refs.race.value;
-    this.props.setRace(race);
+    if (!isNaN(parseFloat(race)) && isFinite(race) && race > 0) {
+      this.props.setRace(race);
+    }
+    else {
+      alert('Please choose a number greater than 0')
+    }
     this.refs.raceForm.reset();
   },
 
