@@ -1,23 +1,34 @@
 import React from 'react';
 
-// function that needs difficulty, missed ball
+/* Compare random number to difficulty value based upon set difficulty
+and current ball to determin if the ghost won */
 
-// % of win
-// [[30, 50 90], [40, 60 95], [40, 70 100], [40, 80 100], [40, 60 100], [40, 60 100], [40, 60 100], [40, 60 100]]
-// [1, 2, 3, 4, 5, 6, 7, 8, 9] map over this and build a button for each one
+function calculateMiss(missedBall) {
 
-function isMiss(ball) {
+  const difficultyValues = [
+    /* 1 ball */ [20, 30, 50],
+    /* 2 ball */ [25, 35, 60],
+    /* 3 ball */ [30, 40, 70],
+    /* 4 ball */ [33, 45, 80],
+    /* 5 ball */ [35, 50, 90],
+    /* 6 ball */ [40, 55, 95],
+    /* 7 ball */ [45, 65, 100],
+    /* 8 ball */ [55, 80, 100],
+    /* 9 ball */ [70, 90, 100]
+  ]
 
-  const scales = [[30, 50, 90], [40, 60, 95], [40, 60, 100], [40, 60, 100], [40, 60, 100], [40, 60, 100], [98, 99, 100], [99, 100, 100]]
-  // const balls = new Array(9)
-  let scale = scales[ball]
-  let difficulty = scale[this.props.difficulty]
-  let roll = Math.floor(Math.random() * 100 + 1);
-  console.log('roll: ' + roll , 'difficulty: ' + difficulty)
+  let randomNum = Math.floor(Math.random() * 100 + 1);
 
-  if (roll < difficulty) {
+  let difficultyValue = difficultyValues[missedBall]
+  let difficulty = difficultyValue[this.props.difficulty]
+
+
+  console.log('roll: ' + randomNum , 'difficulty: ' + difficulty)
+
+  if (randomNum < difficulty) {
     this.props.incrementGhostScore();
-  } else {
+  }
+  else {
     alert('shoot again');
   }
 
@@ -29,7 +40,7 @@ const MissButton = React.createClass({
     return (
     <div>
       {[0,1,2,3,4,5,6,7,8].map((val, index) => {
-        return <button key={index} onClick={isMiss.bind(this, index)}>
+        return <button key={index} onClick={calculateMiss.bind(this, index)}>
           {index + 1}
         </button>
       })}
