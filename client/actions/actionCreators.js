@@ -5,7 +5,7 @@ export function missedBall(ball) {
   }
 }
 
-export function setDifficulty(race) {
+export function setRace(race) {
   return {
   type: 'SET_RACE',
   race
