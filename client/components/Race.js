@@ -4,7 +4,7 @@ const Race = React.createClass({
 
   handleSubmit(e) {
     e.preventDefault();
-    const race = this.refs.race.value;
+    const race = parseInt(this.refs.race.value);
     if (!isNaN(parseFloat(race)) && isFinite(race) && race > 0) {
       this.props.setRace(race);
     }

@@ -5,7 +5,7 @@ and current ball to determin if the ghost won */
 
 function calculateMiss(missedBall) {
 
-  const { race, playerScore, ghostScore } = this.props;
+  const { race, playerScore, ghostScore, difficulty, isWin } = this.props;
 
   const difficultyValues = [
     /* 1 ball */ [20, 30, 50],
@@ -22,13 +22,14 @@ function calculateMiss(missedBall) {
   let randomNum = Math.floor(Math.random() * 100 + 1);
 
   let difficultyValue = difficultyValues[missedBall]
-  let difficulty = difficultyValue[this.props.difficulty]
+  let difficultyCheck = difficultyValue[difficulty]
 
 
-  console.log('roll: ' + randomNum , 'difficulty: ' + difficulty)
+  console.log('roll: ' + randomNum , 'difficulty: ' + difficultyCheck)
 
-  if (randomNum < difficulty) {
+  if (randomNum < difficultyCheck) {
     this.props.incrementGhostScore();
+    console.log(ghostScore);
   }
   else {
     alert('shoot again');
@@ -37,19 +38,30 @@ function calculateMiss(missedBall) {
 }
 
 
+
 const MissButton = React.createClass({
   render() {
     return (
     <div>
       <p> Miss: </p>
-      {[0,1,2,3,4,5,6,7,8].map((val, index) => {
-        return <button key={index} onClick={calculateMiss.bind(this, index)}>
-          {index + 1}
-        </button>
-      })}
+      {this.renderButtons()}
     </div>
     )
+  },
+
+  renderButton(val, index) {
+    return (
+    <button key={index} onClick={calculateMiss.bind(this, index)}>
+      {index + 1}
+    </button>
+  )
+},
+
+
+  renderButtons() {
+    return [0,1,2,3,4,5,6,7,8].map(this.renderButton)
   }
+
 })
 
 

@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
+import store from './store';
 
 
 function setMissedBall(state = 0, action) {
@@ -19,6 +20,7 @@ function setRace(state = 0, action) {
     return state;
   }
 }
+
 
 function setDifficulty(state = 0, action) {
   if (action.type === 'SET_DIFFICULTY') {
@@ -47,11 +49,20 @@ function incrementGhostScore(state = 0, action) {
   }
 }
 
+// perhaps dirty?
+function checkWin(state = false, action){
+  if (action.type === 'CHECK_WIN') {
+    return state = true;
+  }
+  return state;
+}
+
 
 const rootReducer = combineReducers({
   missedBall: setMissedBall,
   difficulty: setDifficulty,
   race: setRace,
+  isWin: checkWin,
   playerScore: incrementPlayerScore,
   ghostScore: incrementGhostScore,
   routing: routerReducer,

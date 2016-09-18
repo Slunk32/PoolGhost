@@ -30,3 +30,11 @@ export function incrementGhostScore() {
     type: 'INCREMENT_GHOST_SCORE'
   }
 }
+
+export function checkWin(ghostScore, race) {
+  return {
+    type: 'CHECK_WIN',
+    ghostScore,
+    race
+  }
+}
