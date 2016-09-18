@@ -5,6 +5,8 @@ and current ball to determin if the ghost won */
 
 function calculateMiss(missedBall) {
 
+  const { race, playerScore, ghostScore } = this.props;
+
   const difficultyValues = [
     /* 1 ball */ [20, 30, 50],
     /* 2 ball */ [25, 35, 60],
@@ -39,6 +41,7 @@ const MissButton = React.createClass({
   render() {
     return (
     <div>
+      <p> Miss: </p>
       {[0,1,2,3,4,5,6,7,8].map((val, index) => {
         return <button key={index} onClick={calculateMiss.bind(this, index)}>
           {index + 1}

@@ -15,11 +15,15 @@ const Race = React.createClass({
   },
 
   render() {
-    const { race } = this.props;
+    const { race, playerScore, ghostScore } = this.props;
     return (
       <div>
+        <hr/>
         <p>
-            Race to: { race }
+          Race to: { race }
+        </p>
+        <p>
+          Current game: { playerScore + ghostScore + 1 }
         </p>
         <form ref="raceForm" onSubmit={this.handleSubmit}>
           <input type="text" ref="race" placeholder="Set Race"/>
