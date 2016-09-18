@@ -10,11 +10,11 @@ const Match = React.createClass({
   render() {
     return (
       <div>
+        <Race {...this.props} />
         <Counter who={'Ghost'} score={this.props.ghostScore} />
         <Counter who={'Player'} score={this.props.playerScore} />
         <WinButton incrementPlayerScore={this.props.incrementPlayerScore} />
         <MissButton {...this.props} />
-        <Race {...this.props} />
       </div>
     )
   }

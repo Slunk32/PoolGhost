@@ -54,7 +54,7 @@ const rootReducer = combineReducers({
   race: setRace,
   playerScore: incrementPlayerScore,
   ghostScore: incrementGhostScore,
-  routing: routerReducer
+  routing: routerReducer,
 });
 
 export default rootReducer;
