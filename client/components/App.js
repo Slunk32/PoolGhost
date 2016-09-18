@@ -4,11 +4,10 @@ import * as actionCreators from '../actions/actionCreators';
 import Main from './Main';
 
 
+
+
 function mapStateToProps(state) {
-  return {
-    playerScore: state.score.playerScore,
-    ghostScore: state.score.ghostScore
-  }
+  return {...state}
 }
 
 function mapDispatchToProps(dispatch) {

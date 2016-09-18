@@ -20,8 +20,8 @@ const router = (
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Match}></IndexRoute>
-        <Route path="/view" component={Single}></Route>
-        <Route path="/stats" component={Stats}></Route>
+          <Route path="/view" component={Single}></Route>
+          <Route path="/stats" component={Stats}></Route>
       </Route>
     </Router>
   </Provider>
