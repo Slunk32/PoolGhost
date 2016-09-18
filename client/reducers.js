@@ -11,6 +11,15 @@ function setMissedBall(state = 0, action) {
   }
 }
 
+function setRace(state = 0, action) {
+  if (action.type === 'SET_RACE') {
+    return action.race;
+  }
+  else {
+    return state;
+  }
+}
+
 function setDifficulty(state = 0, action) {
   if (action.type === 'SET_DIFFICULTY') {
     return action.difficulty;
@@ -42,6 +51,7 @@ function incrementGhostScore(state = 0, action) {
 const rootReducer = combineReducers({
   missedBall: setMissedBall,
   difficulty: setDifficulty,
+  race: setRace,
   playerScore: incrementPlayerScore,
   ghostScore: incrementGhostScore,
   routing: routerReducer
