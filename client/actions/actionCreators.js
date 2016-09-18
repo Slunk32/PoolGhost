@@ -5,6 +5,13 @@ export function missedBall(ball) {
   }
 }
 
+export function setRace(race) {
+  return {
+  type: 'SET_RACE',
+  race
+  }
+}
+
 export function setDifficulty(difficulty) {
   return {
   type: 'SET_DIFFICULTY',
