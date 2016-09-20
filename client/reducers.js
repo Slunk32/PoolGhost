@@ -22,7 +22,7 @@ function setRace(state = 0, action) {
 }
 
 
-function setDifficulty(state = 0, action) {
+function setDifficulty(state = 1, action) {
   if (action.type === 'SET_DIFFICULTY') {
     return action.difficulty;
   }
@@ -38,8 +38,8 @@ function incrementPlayerScore(state = 0, action) {
   else {
     return state;
   }
-
 }
+
 function incrementGhostScore(state = 0, action) {
   if (action.type === 'INCREMENT_GHOST_SCORE') {
     return state + 1;
@@ -49,20 +49,24 @@ function incrementGhostScore(state = 0, action) {
   }
 }
 
-// perhaps dirty?
-function checkWin(state = false, action){
-  if (action.type === 'CHECK_WIN') {
-    return state = true;
+
+
+const rootReducer = (state, action) => {
+  if (action.type === 'GHOST_WINS') {
+    alert('GHOST WINS');
+    state = undefined
   }
-  return state;
+  if (action.type === 'PLAYER_WINS') {
+    alert('PLAYER WINS');
+    state = undefined
+  }
+  return appReducer(state, action)
 }
 
-
-const rootReducer = combineReducers({
+const appReducer = combineReducers({
   missedBall: setMissedBall,
   difficulty: setDifficulty,
   race: setRace,
-  isWin: checkWin,
   playerScore: incrementPlayerScore,
   ghostScore: incrementGhostScore,
   routing: routerReducer,

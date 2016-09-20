@@ -5,7 +5,7 @@ and current ball to determin if the ghost won */
 
 function calculateMiss(missedBall) {
 
-  const { race, playerScore, ghostScore, difficulty, isWin } = this.props;
+  const { race, playerScore, ghostScore, difficulty } = this.props;
 
   const difficultyValues = [
     /* 1 ball */ [20, 30, 50],
@@ -27,16 +27,18 @@ function calculateMiss(missedBall) {
 
   console.log('roll: ' + randomNum , 'difficulty: ' + difficultyCheck)
 
-  if (randomNum < difficultyCheck) {
+  if (ghostScore + 1 === race) {
+    this.props.ghostWins();
+  }
+  else if (randomNum < difficultyCheck) {
+    console.log('GhostScore: ' + ghostScore + ', Race: '  + race);
     this.props.incrementGhostScore();
-    console.log(ghostScore);
   }
   else {
     alert('shoot again');
   }
 
 }
-
 
 
 const MissButton = React.createClass({

@@ -13,7 +13,7 @@ const Match = React.createClass({
         <Race {...this.props} />
         <Counter who={'Ghost'} score={this.props.ghostScore} />
         <Counter who={'Player'} score={this.props.playerScore} />
-        <WinButton incrementPlayerScore={this.props.incrementPlayerScore} />
+        <WinButton {...this.props} />
         <MissButton {...this.props} />
       </div>
     )

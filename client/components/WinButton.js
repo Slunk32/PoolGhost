@@ -1,16 +1,27 @@
 import React from 'react';
 
+
 const WinButton = React.createClass({
   render() {
-    const { incrementPlayerScore } = this.props;
     return (
       <div>
         <p> Win: </p>
-        <button onClick={incrementPlayerScore}>
+        <button onClick={this.handleClick.bind(null, this)}>
           Run Out
         </button>
       </div>
     )
+  },
+
+  handleClick() {
+    const { race, playerScore } = this.props;
+
+    if (playerScore + 1 === race) {
+      this.props.playerWins();
+    }
+    else {
+      this.props.incrementPlayerScore();
+    }
   }
 })
 
