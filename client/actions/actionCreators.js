@@ -30,3 +30,15 @@ export function incrementGhostScore() {
     type: 'INCREMENT_GHOST_SCORE'
   }
 }
+
+export function ghostWins() {
+  return {
+    type: 'GHOST_WINS'
+  }
+}
+
+export function playerWins() {
+  return {
+    type: 'PLAYER_WINS'
+  }
+}

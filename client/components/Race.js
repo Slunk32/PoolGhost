@@ -4,7 +4,7 @@ const Race = React.createClass({
 
   handleSubmit(e) {
     e.preventDefault();
-    const race = this.refs.race.value;
+    const race = parseInt(this.refs.race.value);
     if (!isNaN(parseFloat(race)) && isFinite(race) && race > 0) {
       this.props.setRace(race);
     }
@@ -15,16 +15,20 @@ const Race = React.createClass({
   },
 
   render() {
-    const { race } = this.props;
+    const { race, playerScore, ghostScore } = this.props;
     return (
       <div>
-        <p>
-            Race to: { race }
-        </p>
         <form ref="raceForm" onSubmit={this.handleSubmit}>
           <input type="text" ref="race" placeholder="Set Race"/>
           <input type="submit" hidden />
         </form>
+        <p>
+          Race to: { race }
+        </p>
+        <hr/>
+        <p>
+          Currently on game: { playerScore + ghostScore + 1 }
+        </p>
       </div>
     )
   }

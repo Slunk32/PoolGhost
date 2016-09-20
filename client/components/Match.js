@@ -3,17 +3,18 @@ import { Link } from 'react-router';
 import Counter from './Counter';
 import MissButton from './MissButton';
 import Race from './Race';
+import WinButton from './WinButton.js';
 
 
 const Match = React.createClass({
   render() {
     return (
       <div>
-        I'm the main page. This is where the menu will live
+        <Race {...this.props} />
         <Counter who={'Ghost'} score={this.props.ghostScore} />
         <Counter who={'Player'} score={this.props.playerScore} />
+        <WinButton {...this.props} />
         <MissButton {...this.props} />
-        <Race race={this.props.race} setRace={this.props.setRace} />
       </div>
     )
   }
