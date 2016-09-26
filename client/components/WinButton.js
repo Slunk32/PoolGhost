@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 
 const WinButton = React.createClass({
@@ -6,9 +7,9 @@ const WinButton = React.createClass({
     return (
       <div>
         <p> Win: </p>
-        <button onClick={this.handleClick.bind(null, this)}>
+        <Button bsStyle="primary" onClick={this.handleClick.bind(null, this)}>
           Run Out
-        </button>
+        </Button>
       </div>
     )
   },
