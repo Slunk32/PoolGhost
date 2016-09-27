@@ -5,10 +5,9 @@ import { Button } from 'react-bootstrap';
 const WinButton = React.createClass({
   render() {
     return (
-      <div>
-        <p> Win: </p>
+      <div className="win-button">
         <Button bsStyle="primary" onClick={this.handleClick.bind(null, this)}>
-          Run Out
+          Player Win
         </Button>
       </div>
     )

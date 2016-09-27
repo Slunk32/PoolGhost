@@ -5,8 +5,11 @@ const Counter = React.createClass({
   render() {
     const { who, score } = this.props;
     return (
-      <div className="score">
-          {score}
+      <div>
+        <div className="counter-who"> {who} </div>
+        <div className="score">
+            {score}
+        </div>
       </div>
     )
   }
