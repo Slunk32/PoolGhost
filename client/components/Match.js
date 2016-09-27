@@ -17,6 +17,21 @@ const Match = React.createClass({
     )
   },
 
+  translateDifficulty() {
+    if (this.props.difficulty === 0) {
+      return 'Easy';
+    }
+    else if (this.props.difficulty === 1) {
+      return 'Medium';
+    }
+    else if (this.props.difficulty === 2) {
+      return 'Hard';
+    }
+    else {
+      return 'Error';
+    }
+  },
+
   renderCurrentGame() {
     if (this.props.race != 0) {
       return (
@@ -31,7 +46,7 @@ const Match = React.createClass({
           Race to: {this.props.race}
         </div>
         <div className="difficulty-status">
-          Difficulty: {this.props.difficulty}
+          Difficulty: {this.translateDifficulty()}
         </div>
         <WinButton {...this.props} />
         <MissButton {...this.props} />
