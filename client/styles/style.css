@@ -148,8 +148,13 @@ a {
   border-color: #000000;
 }
 #b9 {
-  background: #fdeb2f;
-  border-color: #fdeb2f;
+  border: 0.1px solid black;
+  background: linear-gradient(
+  #fff 18%,
+  #fdeb2f 15%,
+  #fdeb2f 85%,
+  #fff 50%
+);
 }
 
 #b1 > .circle {
