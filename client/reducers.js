@@ -49,6 +49,15 @@ function incrementGhostScore(state = 0, action) {
   }
 }
 
+function setBanner(state = false, action) {
+  if (action.type === 'SET_BANNER') {
+    return state = true;
+  }
+  else {
+    return state;
+  }
+}
+
 
 
 const rootReducer = (state, action) => {
@@ -66,6 +75,7 @@ const rootReducer = (state, action) => {
 const appReducer = combineReducers({
   missedBall: setMissedBall,
   difficulty: setDifficulty,
+  banner: setBanner,
   race: setRace,
   playerScore: incrementPlayerScore,
   ghostScore: incrementGhostScore,

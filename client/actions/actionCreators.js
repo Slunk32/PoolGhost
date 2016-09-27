@@ -42,3 +42,9 @@ export function playerWins() {
     type: 'PLAYER_WINS'
   }
 }
+
+export function setBanner() {
+  return {
+    type: 'SET_BANNER'
+  }
+}

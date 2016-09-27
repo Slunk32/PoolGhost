@@ -3,11 +3,24 @@ import React from 'react';
 const Notification = React.createClass({
   render() {
     return (
-      <div className="notification-box">
-       <span className="banner"> blah blasdsadsadkadasd </span>
+      <div>
+        {this.renderNotification()}
       </div>
     )
+  },
+
+  renderNotification() {
+    if (this.props.banner === false) {
+      return (
+        <div className="notification-box">
+          <span className="banner">
+            Nice out!
+          </span>
+        </div>
+      )
+    }
   }
+
 })
 
 

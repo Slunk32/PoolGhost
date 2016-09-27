@@ -8,7 +8,7 @@ const Main = React.createClass({
     return (
       <div>
         <NavbarInstance />
-        <Notification />
+        <Notification {...this.props} />
         {React.cloneElement(this.props.children, this.props)}
       </div>
     )
