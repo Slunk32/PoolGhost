@@ -4,7 +4,8 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock, Button } from 'r
 const Race = React.createClass({
     getInitialState() {
       return {
-        value: ''
+        value: '',
+        difficulty: 0
       };
     },
 
@@ -14,15 +15,22 @@ const Race = React.createClass({
       else if (race < 0 || race.length > 0) return 'error';
     },
 
-    handleChange(e) {
-      this.setState({ value: e.target.value });
+    handleRaceChange(e) {
+      this.setState({ value: e.target.value});
+    },
+
+    handleDifficultyChange(e) {
+      this.setState({ difficulty: e.target.value });
     },
 
     handleSubmit(e) {
       const race = parseInt(this.state.value);
+      const difficulty = parseInt(this.state.difficulty);
       if (!isNaN(parseFloat(race)) && isFinite(race) && race > 0) {
         e.preventDefault();
+        console.log(this.state);
         this.props.setRace(race);
+        this.props.setDifficulty(difficulty);
       }
       else {
         e.preventDefault();
@@ -42,17 +50,19 @@ const Race = React.createClass({
               type="text"
               value={this.state.value}
               placeholder="Enter Race"
-              onChange={this.handleChange}
+              onChange={this.handleRaceChange}
             />
             <FormControl.Feedback />
             <HelpBlock> - The race number must be a number greater than 0 (common races are 5, 7, or 9). </HelpBlock>
           </FormGroup>
           <FormGroup controlId="formControlsSelect">
-            <ControlLabel>Select</ControlLabel>
-            <FormControl componentClass="select" placeholder="select">
-              <option value="select">select</option>
-              <option value="other">...</option>
+            <ControlLabel>Difficulty:</ControlLabel>
+            <FormControl componentClass="select" value={this.state.difficulty} onChange={this.handleDifficultyChange}>
+              <option value="0">Easy</option>
+              <option value="1">Medium</option>
+              <option value="2">Hard</option>
             </FormControl>
+            <HelpBlock> - The difficulty determines how likely the ghost will run out on a miss. </HelpBlock>
           </FormGroup>
           <Button onClick={this.handleSubmit} className="btn btn-primary btn-large centerButton" type="submit">Send</Button>
         </form>
