@@ -148,14 +148,78 @@ a {
   border-color: #000000;
 }
 #b9 {
-  background: #fef331;
-  border-color: #fef331;
+  background: #fdeb2f;
+  border-color: #fdeb2f;
 }
 
-#b1 > .eight {
-  border-radius: 300px;
+#b1 > .circle {
+  border-radius: 200px;
   font-size: 15px;
-  padding: 1px;
+  padding: 1px 3px 1px 3px;
+  color: #000;
+  text-align: center;
+  background: #fff;
+}
+#b2 > .circle {
+  border-radius: 200px;
+  font-size: 15px;
+  padding: 1px 3px 1px 3px;
+  color: #000;
+  text-align: center;
+  background: #fff;
+}
+#b3 > .circle {
+  border-radius: 200px;
+  font-size: 15px;
+  padding: 1px 3px 1px 3px;
+  color: #000;
+  text-align: center;
+  background: #fff;
+}
+#b4 > .circle {
+  border-radius: 200px;
+  font-size: 15px;
+  padding: 1px 3px 1px 3px;
+  color: #000;
+  text-align: center;
+  background: #fff;
+}
+#b5 > .circle {
+  border-radius: 200px;
+  font-size: 15px;
+  padding: 1px 3px 1px 3px;
+  color: #000;
+  text-align: center;
+  background: #fff;
+}
+#b6 > .circle {
+  border-radius: 200px;
+  font-size: 15px;
+  padding: 1px 3px 1px 3px;
+  color: #000;
+  text-align: center;
+  background: #fff;
+}
+#b7 > .circle {
+  border-radius: 200px;
+  font-size: 15px;
+  padding: 1px 3px 1px 3px;
+  color: #000;
+  text-align: center;
+  background: #fff;
+}
+#b8 > .circle {
+  border-radius: 200px;
+  font-size: 15px;
+  padding: 1px 3px 1px 3px;
+  color: #000;
+  text-align: center;
+  background: #fff;
+}
+#b9 > .circle {
+  border-radius: 200px;
+  font-size: 15px;
+  padding: 1px 3px 1px 3px;
   color: #000;
   text-align: center;
   background: #fff;
