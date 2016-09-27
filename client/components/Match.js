@@ -27,6 +27,12 @@ const Match = React.createClass({
           <Counter who={'Player'} score={this.props.playerScore} />
         </div>
         <hr/>
+        <div className="race-status">
+          Race to: {this.props.race}
+        </div>
+        <div className="difficulty-status">
+          Difficulty: {this.props.difficulty}
+        </div>
         <WinButton {...this.props} />
         <MissButton {...this.props} />
       </div>

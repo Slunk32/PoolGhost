@@ -76,11 +76,32 @@ a {
 	width: 600px;
 	float: left;
 	left: 50%;
+  top: 20%;
 	position: absolute;
   margin-top:30px;
 	margin-left: -260px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
+}
+
+.win-button {
+  text-align: center;
+}
+
+.race-status {
+  text-align: center;
+  font-size: 30px;
+  color: #3e474f;
+  font-weight: bold;
+  margin: 30px 30px 0 30px;
+}
+
+.difficulty-status {
+  text-align: center;
+  font-size: 20px;
+  color: #3e474f;
+  margin: 10px 30px 30px 30px;
+
 }
 
 
