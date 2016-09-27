@@ -9,15 +9,38 @@ import WinButton from './WinButton.js';
 const Match = React.createClass({
   render() {
     return (
+      <div className="match-main">
+        <div className="match-div">
+          {this.renderCurrentGame()}
+        </div>
+      </div>
+    )
+  },
+
+  renderCurrentGame() {
+    if (this.props.race != 0) {
+      return (
       <div>
-        <Race {...this.props} />
-        <Counter who={'Ghost'} score={this.props.ghostScore} />
-        <Counter who={'Player'} score={this.props.playerScore} />
+        <div className="race-div">
+          <Counter who={'Ghost'} score={this.props.ghostScore} />
+          <div className="spacer"> : </div>
+          <Counter who={'Player'} score={this.props.playerScore} />
+        </div>
+        <hr/>
         <WinButton {...this.props} />
         <MissButton {...this.props} />
       </div>
-    )
+      )
+    }
+    else {
+      return (
+        <div>
+          <Race {...this.props} />
+        </div>
+      )
+    }
   }
+
 })
 
 

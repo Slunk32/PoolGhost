@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 /* Compare random number to difficulty value based upon set difficulty
 and current ball to determin if the ghost won */
@@ -44,18 +45,19 @@ function calculateMiss(missedBall) {
 const MissButton = React.createClass({
   render() {
     return (
-    <div>
-      <p> Miss: </p>
-      {this.renderButtons()}
+    <div className="float_center_buttons">
+      <div className="div_background_butons">
+        {this.renderButtons()}
+      </div>
     </div>
     )
   },
 
   renderButton(val, index) {
     return (
-    <button key={index} onClick={calculateMiss.bind(this, index)}>
-      {index + 1}
-    </button>
+      <Button className="buttons" bsStyle="primary" bsSize="small" key={index} onClick={calculateMiss.bind(this, index)}>
+        {index + 1}
+      </Button>
   )
 },
 
