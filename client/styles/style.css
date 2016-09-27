@@ -1,29 +1,61 @@
 body {
   background: #edeff0;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
 }
 
-.float_center {
+.float_center_buttons {
   float: right;
-
   position: relative;
   left: -50%; /* or right 50% */
   text-align: left;
 }
 
-.float_center > .child {
+.float_center_buttons > .div_background_butons {
   position: relative;
   left: 50%;
+  top: 20px;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+  background-color: #fff;
 }
 
 .buttons {
-  margin-left: 8px;
+  margin-left: 10px;
   border-radius: 24px;
 }
 
+.counter-container {
+  margin: auto 0;
+}
+
+.match-main {
+	width:100%;
+	float:left;
+	padding-top:0px;
+}
+
+.match-div {
+	background-color: #C8D1D5;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:35px;
+	padding-bottom:50px;
+	width: 600px;
+	float: left;
+	left: 50%;
+	position: absolute;
+  margin-top:30px;
+	margin-left: -260px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
 
 
 /* Bootstrap nav bar customization */

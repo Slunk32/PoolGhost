@@ -45,8 +45,8 @@ function calculateMiss(missedBall) {
 const MissButton = React.createClass({
   render() {
     return (
-    <div className="float_center">
-      <div className="child">
+    <div className="float_center_buttons">
+      <div className="div_background_butons">
         {this.renderButtons()}
       </div>
     </div>

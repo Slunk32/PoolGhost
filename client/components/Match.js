@@ -9,12 +9,14 @@ import WinButton from './WinButton.js';
 const Match = React.createClass({
   render() {
     return (
-      <div>
+      <div className="match-main">
+        <div className="match-div">
         <Race {...this.props} />
         <Counter who={'Ghost'} score={this.props.ghostScore} />
         <Counter who={'Player'} score={this.props.playerScore} />
         <WinButton {...this.props} />
         <MissButton {...this.props} />
+        </div>
       </div>
     )
   }
