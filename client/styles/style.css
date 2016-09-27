@@ -8,6 +8,28 @@ a {
   text-decoration: none;
 }
 
+.race-div {
+  display: flex;
+  justify-content: center; /* center items horizontally, in this case */
+  align-items: center;     /* center items vertically, in this case */
+  height: 100px;
+}
+
+.spacer {
+  margin: 0px 50px 0px 50px;
+  font-size: 50px;
+}
+
+.missed-ball {
+  text-align: center;
+}
+
+.score {
+  font-size: 120px;
+  font-weight: bolder;
+  color: #3e474f;
+}
+
 .float_center_buttons {
   float: right;
   position: relative;
