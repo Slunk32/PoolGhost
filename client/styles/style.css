@@ -14,9 +14,13 @@ a {
 
 .race-div {
   display: flex;
-  justify-content: center; /* center items horizontally, in this case */
-  align-items: center;     /* center items vertically, in this case */
-  height: 100px;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.counter-who {
+  text-align: center;
 }
 
 .spacer {
@@ -103,7 +107,6 @@ a {
   margin: 10px 30px 30px 30px;
 
 }
-
 
 /* Bootstrap nav bar customization */
 

@@ -22,9 +22,9 @@ const Match = React.createClass({
       return (
       <div>
         <div className="race-div">
-          <Counter who={'Ghost'} score={this.props.ghostScore} />
-          <div className="spacer"> : </div>
           <Counter who={'Player'} score={this.props.playerScore} />
+          <div className="spacer"> : </div>
+          <Counter who={'Ghost'} score={this.props.ghostScore} />
         </div>
         <hr/>
         <div className="race-status">
