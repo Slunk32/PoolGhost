@@ -113,6 +113,54 @@ a {
 
 }
 
+/* Ball styling */
+
+#b1 {
+  background: #fdeb2f;
+  border-color: #fdeb2f;
+}
+#b2 {
+  background: #303ddb;
+  border-color: #303ddb;
+}
+#b3 {
+  background: #ff0103;
+  border-color: #ff0103;
+}
+#b4 {
+  background: #860089;
+  border-color: #860089;
+}
+#b5 {
+  background: #fe6702;
+  border-color: #fe6702;
+}
+#b6 {
+  background: #078548;
+  border-color: #078548;
+}
+#b7 {
+  background: #d00020;
+  border-color: #d00020;
+}
+#b8 {
+  background: #000000;
+  border-color: #000000;
+}
+#b9 {
+  background: #fef331;
+  border-color: #fef331;
+}
+
+#b1 > .eight {
+  border-radius: 300px;
+  font-size: 15px;
+  padding: 1px;
+  color: #000;
+  text-align: center;
+  background: #fff;
+}
+
 /* Bootstrap nav bar customization */
 
 .navbar-default {

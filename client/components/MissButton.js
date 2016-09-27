@@ -55,8 +55,8 @@ const MissButton = React.createClass({
 
   renderButton(val, index) {
     return (
-      <Button className="buttons" bsStyle="primary" bsSize="small" key={index} onClick={calculateMiss.bind(this, index)}>
-        {index + 1}
+      <Button id={'b' + (index + 1)} className="buttons" bsStyle="primary" bsSize="small" key={index} onClick={calculateMiss.bind(this, index)}>
+        <span className="eight">{index + 1}</span>
       </Button>
   )
 },
