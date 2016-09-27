@@ -8,6 +8,10 @@ a {
   text-decoration: none;
 }
 
+.raceButton {
+  margin-top: 54px;
+}
+
 .race-div {
   display: flex;
   justify-content: center; /* center items horizontally, in this case */

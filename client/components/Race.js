@@ -5,7 +5,7 @@ const Race = React.createClass({
     getInitialState() {
       return {
         value: '',
-        difficulty: 0
+        difficulty: 1
       };
     },
 
@@ -16,11 +16,15 @@ const Race = React.createClass({
     },
 
     handleRaceChange(e) {
-      this.setState({ value: e.target.value});
+      this.setState({
+        value: e.target.value
+      });
     },
 
     handleDifficultyChange(e) {
-      this.setState({ difficulty: e.target.value });
+      this.setState({
+        difficulty: e.target.value
+      });
     },
 
     handleSubmit(e) {
@@ -64,7 +68,7 @@ const Race = React.createClass({
             </FormControl>
             <HelpBlock> - The difficulty determines how likely the ghost will run out on a miss. </HelpBlock>
           </FormGroup>
-          <Button onClick={this.handleSubmit} className="btn btn-primary btn-large centerButton" type="submit">Send</Button>
+          <Button onClick={this.handleSubmit} bsStyle="primary" bsSize="large" block className="raceButton" type="submit">Send</Button>
         </form>
       );
     }
