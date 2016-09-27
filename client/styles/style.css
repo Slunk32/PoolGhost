@@ -118,38 +118,51 @@ a {
 #b1 {
   background: #fdeb2f;
   border-color: #fdeb2f;
+  border: 0.1px solid black;
 }
 #b2 {
   background: #303ddb;
   border-color: #303ddb;
+  border: 0.1px solid black;
 }
 #b3 {
   background: #ff0103;
   border-color: #ff0103;
+  border: 0.1px solid black;
 }
 #b4 {
   background: #860089;
   border-color: #860089;
+  border: 0.1px solid black;
 }
 #b5 {
   background: #fe6702;
   border-color: #fe6702;
+  border: 0.1px solid black;
 }
 #b6 {
   background: #078548;
   border-color: #078548;
+  border: 0.1px solid black;
 }
 #b7 {
   background: #d00020;
   border-color: #d00020;
+  border: 0.1px solid black;
 }
 #b8 {
   background: #000000;
   border-color: #000000;
+  border: 0.1px solid black;
 }
 #b9 {
-  background: #fdeb2f;
-  border-color: #fdeb2f;
+  border: 0.1px solid black;
+  background: linear-gradient(
+  #fff 18%,
+  #fdeb2f 15%,
+  #fdeb2f 85%,
+  #fff 50%
+);
 }
 
 #b1 > .circle {
