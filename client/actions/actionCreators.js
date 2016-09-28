@@ -42,3 +42,24 @@ export function playerWins() {
     type: 'PLAYER_WINS'
   }
 }
+
+export function setBanner1(status) {
+  return {
+    type: 'SET_BANNER_1',
+    status
+  }
+}
+
+export function setBanner2(status) {
+  return {
+    type: 'SET_BANNER_2',
+    status
+  }
+}
+
+export function setBanner3(status) {
+  return {
+    type: 'SET_BANNER_3',
+    status
+  }
+}

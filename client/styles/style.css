@@ -12,6 +12,11 @@ a {
   margin-top: 54px;
 }
 
+.notification {
+  margin-left: 56px;
+  text-align: center;
+}
+
 .race-div {
   display: flex;
   justify-content: center;
@@ -24,7 +29,6 @@ a {
   color: #3e474f;
   font-weight: bold;
   font-size: 20px;
-  border-bottom: 2px solid #337ab7;
 }
 
 .spacer {
@@ -47,6 +51,9 @@ a {
   position: relative;
   left: -50%; /* or right 50% */
   text-align: left;
+}
+
+.banner {
 }
 
 .float_center_buttons > .div_background_butons {
@@ -91,6 +98,22 @@ a {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
 }
+
+.notification-box {
+  background-color: #C8D1D5;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+	padding-left: 35px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 450px;
+	float: left;
+	left: 39%;
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+}
+
 
 .win-button {
   text-align: center;
