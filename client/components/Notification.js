@@ -5,7 +5,6 @@ const Notification = React.createClass({
   render() {
     return (
       <div>
-        <span> placeholder </span>
         {this.renderNotification()}
       </div>
     )
