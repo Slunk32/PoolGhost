@@ -51,12 +51,18 @@ function incrementGhostScore(state = 0, action) {
 
 function setBanner(state = false, action) {
   if (action.type === 'SET_BANNER') {
-    return state = true;
+    if (action.status) {
+      return state = true;
+    }
+    else if (action.status === false) {
+      return state = false;
+    }
   }
   else {
     return state;
   }
 }
+
 
 
 

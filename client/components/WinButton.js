@@ -20,6 +20,10 @@ const WinButton = React.createClass({
       this.props.playerWins();
     }
     else {
+      this.props.setBanner(true);
+      setTimeout(() => {
+        this.props.setBanner(false);
+      }, 3000);
       this.props.incrementPlayerScore();
     }
   }
