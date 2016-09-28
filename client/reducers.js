@@ -49,8 +49,8 @@ function incrementGhostScore(state = 0, action) {
   }
 }
 
-function setBanner(state = false, action) {
-  if (action.type === 'SET_BANNER') {
+function setBanner1(state = false, action) {
+  if (action.type === 'SET_BANNER_1') {
     if (action.status) {
       return state = true;
     }
@@ -63,6 +63,33 @@ function setBanner(state = false, action) {
   }
 }
 
+function setBanner2(state = false, action) {
+  if (action.type === 'SET_BANNER_2') {
+    if (action.status) {
+      return state = true;
+    }
+    else if (action.status === false) {
+      return state = false;
+    }
+  }
+  else {
+    return state;
+  }
+}
+
+function setBanner3(state = false, action) {
+  if (action.type === 'SET_BANNER_3') {
+    if (action.status) {
+      return state = true;
+    }
+    else if (action.status === false) {
+      return state = false;
+    }
+  }
+  else {
+    return state;
+  }
+}
 
 
 
@@ -81,7 +108,9 @@ const rootReducer = (state, action) => {
 const appReducer = combineReducers({
   missedBall: setMissedBall,
   difficulty: setDifficulty,
-  banner: setBanner,
+  banner1: setBanner1,
+  banner2: setBanner2,
+  banner3: setBanner3,
   race: setRace,
   playerScore: incrementPlayerScore,
   ghostScore: incrementGhostScore,

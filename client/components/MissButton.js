@@ -33,12 +33,18 @@ function calculateMiss(missedBall) {
   }
   else if (randomNum < difficultyCheck) {
     console.log('GhostScore: ' + ghostScore + ', Race: '  + race);
+    this.props.setBanner3(true);
+    setTimeout(() => {
+      this.props.setBanner3(false);
+    }, 5000);
     this.props.incrementGhostScore();
   }
   else {
-    alert('shoot again');
+    this.props.setBanner2(true);
+    setTimeout(() => {
+      this.props.setBanner2(false);
+    }, 5000);
   }
-
 }
 
 
