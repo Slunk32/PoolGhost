@@ -15,11 +15,14 @@ const NavbarInstance =  React.createClass({
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav>
-        <LinkContainer to='/view'>
-          <NavItem>View</NavItem>
+        <LinkContainer to='/match'>
+          <NavItem>Match</NavItem>
         </LinkContainer>
         <LinkContainer to='/stats'>
           <NavItem>Stats</NavItem>
+        </LinkContainer>
+        <LinkContainer to='/help'>
+          <NavItem>Help</NavItem>
         </LinkContainer>
       </Nav>
       <Nav pullRight>

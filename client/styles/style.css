@@ -12,6 +12,13 @@ a {
   margin-top: 54px;
 }
 
+.help-button {
+  float: right;
+  position: relative;
+  left: -50%; /* or right 50% */
+  text-align: center;
+}
+
 .notification {
   margin-left: 56px;
   text-align: center;
