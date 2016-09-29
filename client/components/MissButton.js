@@ -9,15 +9,15 @@ function calculateMiss(missedBall) {
   const { race, playerScore, ghostScore, difficulty } = this.props;
 
   const difficultyValues = [
-    /* 1 ball */ [20, 30, 50],
-    /* 2 ball */ [25, 35, 60],
-    /* 3 ball */ [30, 40, 70],
-    /* 4 ball */ [33, 45, 80],
-    /* 5 ball */ [35, 50, 90],
-    /* 6 ball */ [40, 55, 95],
-    /* 7 ball */ [45, 65, 100],
-    /* 8 ball */ [55, 80, 100],
-    /* 9 ball */ [70, 90, 100]
+    /* 1 ball */ [10, 30, 50],
+    /* 2 ball */ [15, 35, 60],
+    /* 3 ball */ [20, 40, 70],
+    /* 4 ball */ [20, 45, 80],
+    /* 5 ball */ [25, 50, 90],
+    /* 6 ball */ [30, 55, 95],
+    /* 7 ball */ [30, 65, 100],
+    /* 8 ball */ [35, 80, 100],
+    /* 9 ball */ [40, 90, 100]
   ]
 
   let randomNum = Math.floor(Math.random() * 100 + 1);
