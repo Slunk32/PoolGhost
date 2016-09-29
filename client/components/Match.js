@@ -5,8 +5,7 @@ import MissButton from './MissButton';
 import Race from './Race';
 import WinButton from './WinButton.js';
 
-
-const Match = React.createClass({
+const Home = React.createClass({
   render() {
     return (
       <div className="match-main">
@@ -66,4 +65,4 @@ const Match = React.createClass({
 
 
 
-export default Match;
+export default Home;

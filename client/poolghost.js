@@ -6,9 +6,10 @@ import css from './styles/style.css';
 
 // import components
 import App from './components/App';
-import Single from './components/Single';
-import Match from './components/Match';
+import Home from './components/Home';
 import Stats from './components/Stats';
+import Match from './components/Match';
+import Help from './components/Help';
 
 // import react router deps
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
@@ -19,9 +20,10 @@ const router = (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={Match}></IndexRoute>
-          <Route path="/view" component={Single}></Route>
+        <IndexRoute component={Home}></IndexRoute>
+          <Route path="/match" component={Match}></Route>
           <Route path="/stats" component={Stats}></Route>
+          <Route path="/help" component={Help}></Route>
       </Route>
     </Router>
   </Provider>

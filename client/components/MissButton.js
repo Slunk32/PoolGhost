@@ -8,13 +8,15 @@ function calculateMiss(missedBall) {
 
   const { race, playerScore, ghostScore, difficulty } = this.props;
 
+// easy [10% - 40%], medium [30% - 90%], hard [50-100%]
+
   const difficultyValues = [
     /* 1 ball */ [10, 30, 50],
     /* 2 ball */ [15, 35, 60],
     /* 3 ball */ [20, 40, 70],
     /* 4 ball */ [20, 45, 80],
-    /* 5 ball */ [25, 50, 90],
-    /* 6 ball */ [30, 55, 95],
+    /* 5 ball */ [25, 50, 85],
+    /* 6 ball */ [30, 55, 90],
     /* 7 ball */ [30, 65, 100],
     /* 8 ball */ [35, 80, 100],
     /* 9 ball */ [40, 90, 100]
@@ -26,13 +28,14 @@ function calculateMiss(missedBall) {
   let difficultyCheck = difficultyValue[difficulty]
 
 
-  console.log('roll: ' + randomNum , 'difficulty: ' + difficultyCheck)
+  console.log('Player Roll: ' + randomNum , 'Ghost Roll: ' + difficultyCheck)
 
   if (ghostScore + 1 === race) {
     this.props.ghostWins();
   }
   else if (randomNum < difficultyCheck) {
-    console.log('GhostScore: ' + ghostScore + ', Race: '  + race);
+    this.props.setBanner1(false);
+    this.props.setBanner2(false);
     this.props.setBanner3(true);
     setTimeout(() => {
       this.props.setBanner3(false);
@@ -40,6 +43,8 @@ function calculateMiss(missedBall) {
     this.props.incrementGhostScore();
   }
   else {
+    this.props.setBanner1(false);
+    this.props.setBanner3(false);
     this.props.setBanner2(true);
     setTimeout(() => {
       this.props.setBanner2(false);

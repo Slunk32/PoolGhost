@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Stats = React.createClass({
+const Help = React.createClass({
   render() {
     return (
       <div>
-       STATS!!
+       Help
       </div>
     )
   }
@@ -12,4 +12,4 @@ const Stats = React.createClass({
 
 
 
-export default Stats;
+export default Help;
