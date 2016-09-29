@@ -3,59 +3,64 @@ import React from 'react';
 const Help = React.createClass({
   render () {
     let data = [
-      {
-        title: 'One',
-        content: `Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis
-                  nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit
-                  in voluptate velit esse cillum dolore
-                  eu fugiat nulla pariatur. Excepteur
-                  sint occaecat cupidatat non proident,
-                  sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.`
-      }, {
-        title: 'Two',
-        content: `Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis
-                  nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit
-                  in voluptate velit esse cillum dolore
-                  eu fugiat nulla pariatur. Excepteur
-                  sint occaecat cupidatat non proident,
-                  sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.`
-      },{
-        title: 'Three',
-        content: `Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis
-                  nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit
-                  in voluptate velit esse cillum dolore
-                  eu fugiat nulla pariatur. Excepteur
-                  sint occaecat cupidatat non proident,
-                  sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.`
-      }
-    ];
+      	{
+          title: 'What is "Playing The Ghost?"',
+          content: `Playing the Ghost blah blah blah While you can still use
+                    this app with the old fashion rules for playing the ghost,
+                    I recommend some modifications.`
+        }, {
+          title: 'What exactly does "Difficulty" do?',
+          content: `Difficulty increases the likelihood that the ghost will
+                    win the rack on each miss. While each ball as you get closer
+                    to the 9 increases this percentage, the difficulty sets the
+                    overall increase of that percentage. For example, on easy difficulty,
+                    if you missed the 5 ball there is a 25% chance out of 100 (1 in 4 times)
+                    that the ghost will win the rack. On medium, it’s 50% chance, and hard it’s 85%.`
+        }, {
+          title: 'How do I start each rack?',
+          content: `You can break or randomly roll all 9 balls out onto the table.
+                    Once all the balls are randomly positioned on the table,
+                    make sure there are no clusters and every ball has a pocket.
+                    This will help keep the difficulty more consistent and
+                    also make sure you are always shooting at an entire rack.`
+        }, {
+          title: 'Can I play safe?',
+          content: `While safeties are an important part of pool,
+                    the focus of this app is more to improve your position play
+                    and runout game. Safeties will not be counted as every shot should
+                    result in pocketing the intended ball.`
+        }, {
+          title: 'What if I miss but luckily get safe?',
+          content: `If you miss the object ball and luckily have the cueball
+                    get safe, it is still recorded as a miss. Rememeber, even though
+                    you would have got lucky and possibly safe in a real match, this
+                    app is tracking your run out skills on intended shots only.`
+        }, {
+          title: 'Does fluking the object ball or 9 ball count?',
+          content: `Fluking the 9 ball or making the object ball in the wrong pocket
+                    is rewarded in basic 9 ball. In this app, I recommend treating
+                    both of these as a miss as it was not the intended shot.`
+        }, {
+          title: 'I missed but accidently tied balls up?',
+          content: `If you missed, tied balls up, and then the ghost missed and you
+                    get to shoot again, your goal is to free the tied up balls in
+                    a consistant way to how they were before. If that is difficult to do,
+                    I also recommend spotting one of the tied ball. Use your best judgement
+                    on where to place the ball. For example, if the ball was on the rail,
+                    perhaps try to put it on another rail with a free pocket.`
+        }, {
+          title: 'I scratched. Now what?',
+          content: `Scratching is treated just as a normal miss. Record the
+                    ball you were intending to make as the missed ball and if
+                    the ghost misses, continue with ball in hand.`
+        }
+      ];
 
     return (
-      <Accordion data={data} />
+    	<Accordion data={data} />
     );
   }
-  });
+});
 
 const Accordion = React.createClass({
 
