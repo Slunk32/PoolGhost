@@ -6,7 +6,7 @@ const WinButton = React.createClass({
   render() {
     return (
       <div className="win-button">
-        <Button bsStyle="primary" onClick={this.handleClick.bind(null, this)}>
+        <Button bsStyle="primary" bsSize="large" onClick={this.handleClick.bind(null, this)}>
           Player Win
         </Button>
       </div>

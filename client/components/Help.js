@@ -9,6 +9,28 @@ const Help = React.createClass({
                     this app with the old fashion rules for playing the ghost,
                     I recommend some modifications.`
         }, {
+          title: 'How do I use Pool Ghost?',
+          content: `Pool Ghost was made to virtualize an opponent. Traditionally
+                    when you play the ghost, a missed shot is a game loss. While
+                    that is great practice, I wanted something more true to playing
+                    other players. Here, you play a normal 9 ball ghost game, but
+                    when you miss you click on the ball you missed on. A calculation
+                    then based upon your current difficulty level and the ball that
+                    was missed will decide if the ghost ran out or not. If the ghost
+                    missed, you get ball and hand and continue through the rack.`
+        }, {
+          title: 'What exactly does "Difficulty" do?',
+          content: `Difficulty increases the likelihood that the ghost will
+                    win the rack on each miss. While each ball as you get closer
+                    to the 9 increases this percentage, the difficulty sets the
+                    overall increase of that percentage. For example, on easy difficulty,
+                    if you missed the 5 ball there is a 25% chance out of 100 (1 in 4 times)
+                    that the ghost will win the rack. On medium, it’s a 50% chance, and hard it’s a 85% chance.`
+        }, {
+          title: 'Does the race matter?',
+          content: `The race can be any positive number, but I recommend races
+                    between 5-10 games. Most 9 ball tournaments are around that length.`
+        }, {
           title: 'What exactly does "Difficulty" do?',
           content: `Difficulty increases the likelihood that the ghost will
                     win the rack on each miss. While each ball as you get closer

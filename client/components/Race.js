@@ -68,7 +68,7 @@ const Race = React.createClass({
             </FormControl>
             <HelpBlock> - The difficulty determines how likely the ghost will run out on a miss. </HelpBlock>
           </FormGroup>
-          <Button onClick={this.handleSubmit} bsStyle="primary" bsSize="large" block className="raceButton" type="submit">Send</Button>
+          <Button onClick={this.handleSubmit} bsStyle="primary" bsSize="large" block className="raceButton" type="submit">Start Match</Button>
         </form>
       );
     }
