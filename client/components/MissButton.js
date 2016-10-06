@@ -11,15 +11,15 @@ function calculateMiss(missedBall) {
 // easy [10% - 40%], medium [30% - 90%], hard [50-100%]
 
   const difficultyValues = [
-    /* 1 ball */ [10, 30, 50],
-    /* 2 ball */ [15, 35, 60],
-    /* 3 ball */ [20, 40, 70],
-    /* 4 ball */ [20, 45, 80],
-    /* 5 ball */ [25, 50, 85],
-    /* 6 ball */ [30, 55, 90],
-    /* 7 ball */ [30, 65, 100],
-    /* 8 ball */ [35, 80, 100],
-    /* 9 ball */ [40, 90, 100]
+    /* 1 ball */ [10, 25, 50],
+    /* 2 ball */ [15, 30, 60],
+    /* 3 ball */ [20, 35, 70],
+    /* 4 ball */ [20, 40, 80],
+    /* 5 ball */ [25, 45, 85],
+    /* 6 ball */ [30, 50, 90],
+    /* 7 ball */ [30, 60, 100],
+    /* 8 ball */ [35, 70, 100],
+    /* 9 ball */ [40, 85, 100]
   ]
 
   let randomNum = Math.floor(Math.random() * 100 + 1);
