@@ -11,7 +11,7 @@ const Race = React.createClass({
 
     getValidationState() {
       const race = this.state.value;
-      if (!isNaN(parseFloat(race)) && isFinite(race) && race > 0) return 'success';
+      if (!isNaN(parseFloat(race)) && isFinite(race) && race % 1 == 0 && race > 0) return 'success';
       else if (race < 0 || race.length > 0) return 'error';
     },
 
@@ -57,7 +57,7 @@ const Race = React.createClass({
               onChange={this.handleRaceChange}
             />
             <FormControl.Feedback />
-            <HelpBlock> - The race number must be a number greater than 0 (common races are 5, 7, or 9). </HelpBlock>
+            <HelpBlock> Race must be a number greater than 0 (common races in tournaments are 3, 5, 7, or 9). </HelpBlock>
           </FormGroup>
           <FormGroup controlId="formControlsSelect">
             <ControlLabel>Difficulty:</ControlLabel>
@@ -66,7 +66,7 @@ const Race = React.createClass({
               <option value="1">Medium</option>
               <option value="2">Hard</option>
             </FormControl>
-            <HelpBlock> - The difficulty determines how likely the ghost will run out on a miss. </HelpBlock>
+            <HelpBlock> Difficulty determines how likely the ghost will run out on a miss. </HelpBlock>
           </FormGroup>
           <Button onClick={this.handleSubmit} bsStyle="primary" bsSize="large" block className="raceButton" type="submit">Start Match</Button>
         </form>
